@@ -1,8 +1,5 @@
 
 class UsersController < ApplicationController
-    def user_params
-        params.require(:user).permit(:name, :email)
-    end
 
     def index
         users = User.all
@@ -14,14 +11,13 @@ class UsersController < ApplicationController
         if user.save
             redirect_to user_url(user)
         else
-            render user.error.full_messages, status: 422
+            render user.errors.full_messages, status: 422
         end
     end
 
     def show
         user = User.find(params[:id])
         render json: user
-        
     end
 
     def update
@@ -30,7 +26,7 @@ class UsersController < ApplicationController
         if user.update(user_params)
             redirect_to user_url(user)
         else
-            render user.error.full_messages, status: 422
+            render user.errors.full_messages, status: 422
         end
     end
 
@@ -38,10 +34,16 @@ class UsersController < ApplicationController
         user = User.find_by(id: params[:id])
 
         if user && user.destroy
-            redirect_to user_url
+            render json: user
+            # redirect_to users_url
         else
             render plain: 'user does not exist'
         end
     end
 
+    private
+
+    def user_params
+        params.require(:user).permit(:name)
+    end
 end
