@@ -5,10 +5,10 @@ class ArtworksController < ApplicationController
     end
 
     def create
-        artwork = Artwork.new
-        
+        artwork = Artwork.new(artwork_params)
+
         if artwork.save
-            redirect_to artwork_url(artwork)
+            redirect_to artwork_url(artwork.id)
         else 
             render artwork.errors.full_messages, status: 422
         end
@@ -20,9 +20,23 @@ class ArtworksController < ApplicationController
     end
 
     def update
+        artwork = Artwork.find(params[:id])
+
+        if artwork.update(artwork_params)
+            redirect_to artwork_url(artwork.id)
+        else 
+            render artwork.errors.full_messages, status: 422
+        end
     end
 
     def destroy
+        artwork = Artwork.find_by(id: params[:id])
+
+        if artwork && artwork.destroy
+            render json: artwork
+        else
+            raise plain: 'artwork does not exist'
+        end
     end
 
     private
