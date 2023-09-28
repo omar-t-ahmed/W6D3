@@ -12,7 +12,7 @@ class ArtworksController < ApplicationController
         else 
             render artwork.errors.full_messages, status: 422
         end
-    end
+    end 
 
     def show
         artwork = Artwork.find(params[:id])
