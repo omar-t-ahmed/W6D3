@@ -1650,3 +1650,405 @@ Processing by ArtworksController#index as HTML
 Completed 200 OK in 22ms (Views: 8.1ms | ActiveRecord: 9.4ms | Allocations: 4557)
 
 
+Started GET "/" for ::1 at 2023-09-28 09:37:56 -0400
+
+ActiveRecord::NoDatabaseError - We could not find your database: routes_and_controllers_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started POST "/__better_errors/e7490f7c03b57945/variables" for ::1 at 2023-09-28 09:37:57 -0400
+Started GET "/" for ::1 at 2023-09-28 10:20:42 -0400
+
+ActiveRecord::NoDatabaseError - We could not find your database: routes_and_controllers_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started POST "/__better_errors/10b7cfd814b603c7/variables" for ::1 at 2023-09-28 10:20:42 -0400
+Started GET "/" for ::1 at 2023-09-28 10:21:28 -0400
+
+ActiveRecord::NoDatabaseError - We could not find your database: routes_and_controllers_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started POST "/__better_errors/874246bf68a91804/variables" for ::1 at 2023-09-28 10:21:29 -0400
+Started GET "/" for ::1 at 2023-09-28 10:45:43 -0400
+
+ActiveRecord::NoDatabaseError - We could not find your database: routes_and_controllers_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started POST "/__better_errors/7e6669ddb3a5fd52/variables" for ::1 at 2023-09-28 10:45:44 -0400
+Started GET "/" for ::1 at 2023-09-28 10:48:43 -0400
+
+ActiveRecord::NoDatabaseError - We could not find your database: routes_and_controllers_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started POST "/__better_errors/ef3c8b6145e65e91/variables" for ::1 at 2023-09-28 10:48:43 -0400
+Started GET "/" for ::1 at 2023-09-28 10:48:44 -0400
+
+ActiveRecord::NoDatabaseError - We could not find your database: routes_and_controllers_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started POST "/__better_errors/f0e7c2f0e38d6cde/variables" for ::1 at 2023-09-28 10:48:44 -0400
+Started GET "/users" for ::1 at 2023-09-28 10:49:31 -0400
+
+ActiveRecord::NoDatabaseError - We could not find your database: routes_and_controllers_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+  [1m[35m (532.5ms)[0m  [1m[35mCREATE DATABASE "routes_and_controllers_development" ENCODING = 'unicode'[0m
+  [1m[35m (248.7ms)[0m  [1m[35mCREATE DATABASE "routes_and_controllers_test" ENCODING = 'unicode'[0m
+Started GET "/users" for ::1 at 2023-09-28 10:52:52 -0400
+  [1m[35m (32.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (17.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+        bin/rails db:migrate RAILS_ENV=development
+You have 4 pending migrations:
+20230927175928_create_users.rb
+20230927184101_update_users.rb
+20230927185021_create_artworks.rb
+20230927192242_create_artwork_shares.rb:
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3105287571145122930)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20230927175928)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying NOT NULL, "email" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_name" ON "users" ("name")[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230927175928"]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to UpdateUsers (20230927184101)
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.7ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "email"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230927184101"]]
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateArtworks (20230927185021)
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (19.4ms)[0m  [1m[35mCREATE TABLE "artworks" ("id" bigserial primary key, "title" character varying NOT NULL, "image_url" character varying NOT NULL, "artist_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_61f542e710"
+FOREIGN KEY ("artist_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE INDEX "index_artworks_on_artist_id" ON "artworks" ("artist_id")[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_artworks_on_image_url" ON "artworks" ("image_url")[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_artworks_on_title_and_artist_id" ON "artworks" ("title", "artist_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230927185021"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateArtworkShares (20230927192242)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "artwork_shares" ("id" bigserial primary key, "artwork_id" bigint NOT NULL, "viewer_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_f5efbe8cf6"
+FOREIGN KEY ("artwork_id")
+  REFERENCES "artworks" ("id")
+, CONSTRAINT "fk_rails_abdcd9d49f"
+FOREIGN KEY ("viewer_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE INDEX "index_artwork_shares_on_artwork_id" ON "artwork_shares" ("artwork_id")[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE INDEX "index_artwork_shares_on_viewer_id" ON "artwork_shares" ("viewer_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230927192242"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-28 14:53:18.583940"], ["updated_at", "2023-09-28 14:53:18.583940"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(3105287571145122930)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users" for ::1 at 2023-09-28 10:53:21 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 19ms (Views: 4.2ms | ActiveRecord: 1.5ms | Allocations: 3720)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "omar"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "omar"], ["created_at", "2023-09-28 14:53:51.848308"], ["updated_at", "2023-09-28 14:53:51.848308"]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "luke"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "luke"], ["created_at", "2023-09-28 14:53:51.859343"], ["updated_at", "2023-09-28 14:53:51.859343"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users" for ::1 at 2023-09-28 10:53:56 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 20ms (Views: 12.8ms | ActiveRecord: 6.9ms | Allocations: 4054)
+
+
+Started GET "/users?id=1" for ::1 at 2023-09-28 10:54:25 -0400
+Processing by UsersController#index as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.9ms | Allocations: 942)
+
+
+Started GET "/users?:id=1" for ::1 at 2023-09-28 10:54:30 -0400
+Processing by UsersController#index as */*
+  Parameters: {":id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.8ms | Allocations: 847)
+
+
+Started GET "/user?name=%22omar%22" for ::1 at 2023-09-28 10:54:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+Started GET "/user?name=omar" for ::1 at 2023-09-28 10:55:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+Started GET "/users?name=omar" for ::1 at 2023-09-28 10:55:34 -0400
+Processing by UsersController#index as */*
+  Parameters: {"name"=>"omar"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms | Allocations: 984)
+
+
+Started GET "/users?id=1" for ::1 at 2023-09-28 10:55:40 -0400
+Processing by UsersController#index as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.5ms | Allocations: 862)
+
+
+Started GET "/users/id=1" for ::1 at 2023-09-28 10:55:51 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"id=1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Completed 404 Not Found in 12ms (ActiveRecord: 1.0ms | Allocations: 3993)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=id=1:
+  app/controllers/users_controller.rb:19:in `show'
+
+Started GET "/users?:id=1" for ::1 at 2023-09-28 10:55:59 -0400
+Processing by UsersController#index as */*
+  Parameters: {":id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.8ms | Allocations: 925)
+
+
+Started GET "/users?:id=%271%27" for ::1 at 2023-09-28 10:56:08 -0400
+Processing by UsersController#index as */*
+  Parameters: {":id"=>"'1'"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.6ms | Allocations: 847)
+
+
+Started GET "/users?id=%221%22" for ::1 at 2023-09-28 10:56:19 -0400
+Processing by UsersController#index as */*
+  Parameters: {"id"=>"\"1\""}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.0ms | Allocations: 847)
+
+
+Started GET "/users?id=1" for ::1 at 2023-09-28 10:57:27 -0400
+Processing by UsersController#index as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 2.2ms | Allocations: 847)
+
+
+Started GET "/users/1" for ::1 at 2023-09-28 10:58:11 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 1.2ms | Allocations: 643)
+
+
+Started GET "/users/:id/1" for ::1 at 2023-09-28 10:59:07 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/:id/1"):
+  
+Started GET "/users/id/1" for ::1 at 2023-09-28 10:59:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/id/1"):
+  
+Started GET "/users?id=1" for ::1 at 2023-09-28 10:59:36 -0400
+Processing by UsersController#index as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.7ms | Allocations: 847)
+
+
+Started GET "/users?name=omar" for ::1 at 2023-09-28 10:59:44 -0400
+Processing by UsersController#index as */*
+  Parameters: {"name"=>"omar"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.9ms | Allocations: 847)
+
+
+Started GET "/users?name=%22omar%22" for ::1 at 2023-09-28 10:59:48 -0400
+Processing by UsersController#index as */*
+  Parameters: {"name"=>"\"omar\""}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.7ms | Allocations: 847)
+
+
+Started GET "/users?:name=%22omar%22" for ::1 at 2023-09-28 10:59:55 -0400
+Processing by UsersController#index as */*
+  Parameters: {":name"=>"\"omar\""}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 1.2ms | Allocations: 847)
+
+
+Started GET "/user?:name=%22omar%22" for ::1 at 2023-09-28 11:02:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+Started GET "/user" for ::1 at 2023-09-28 11:02:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+Started GET "/user?id=1" for ::1 at 2023-09-28 11:02:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+Started GET "/user/1" for ::1 at 2023-09-28 11:02:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/user/1"):
+  
+Started GET "/user" for ::1 at 2023-09-28 11:02:39 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+Started GET "/users" for ::1 at 2023-09-28 11:02:42 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.7ms | Allocations: 847)
+
+
+Started GET "/user?id=1" for ::1 at 2023-09-28 11:03:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+Started GET "/users/id=1" for ::1 at 2023-09-28 11:03:42 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"id=1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.9ms | Allocations: 1031)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=id=1:
+  app/controllers/users_controller.rb:19:in `show'
+
+Started GET "/users/:id=1" for ::1 at 2023-09-28 11:03:54 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>":id=1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.8ms | Allocations: 1031)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=:id=1:
+  app/controllers/users_controller.rb:19:in `show'
+
+Started GET "/users/?id=1" for ::1 at 2023-09-28 11:04:07 -0400
+Processing by UsersController#index as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.9ms | Allocations: 848)
+
+
+Started GET "/users/?id=%221%22" for ::1 at 2023-09-28 11:04:12 -0400
+Processing by UsersController#index as */*
+  Parameters: {"id"=>"\"1\""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.6ms | Allocations: 847)
+
+
+Started GET "/users/1" for ::1 at 2023-09-28 11:06:30 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Completed 200 OK in 8ms (Views: 1.1ms | ActiveRecord: 2.3ms | Allocations: 624)
+
+
+Started GET "/users/omar" for ::1 at 2023-09-28 11:06:37 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"omar"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Completed 404 Not Found in 6ms (ActiveRecord: 1.7ms | Allocations: 1031)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=omar:
+  app/controllers/users_controller.rb:19:in `show'
+
+Started GET "/users/1" for ::1 at 2023-09-28 11:06:50 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.8ms | Allocations: 625)
+
+
+Started GET "/users?id=1" for ::1 at 2023-09-28 11:08:43 -0400
+Processing by UsersController#index as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 1.0ms | Allocations: 847)
+
+
+Started POST "/users?name=akash" for ::1 at 2023-09-28 11:13:33 -0400
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"akash"}
+Completed 400 Bad Request in 34ms (ActiveRecord: 0.0ms | Allocations: 2127)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:47:in `user_params'
+  app/controllers/users_controller.rb:10:in `create'
+
