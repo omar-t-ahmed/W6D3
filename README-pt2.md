@@ -79,7 +79,7 @@ with what will become a very familiar index page.
 
 ### First request
 
-Postman should already be installed, but if not, go ahead and [install
+Postman should already be installe  d, but if not, go ahead and [install
 it][postman].
 
 Try to get a list of all your users, i.e., your _users index_. This means you
