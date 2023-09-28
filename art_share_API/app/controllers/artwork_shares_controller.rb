@@ -1,6 +1,5 @@
 class ArtworkSharesController < ApplicationController
     
-
     def create
         artwork_share = ArtworkShare.new(artwork_share_params)
 

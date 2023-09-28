@@ -28,17 +28,18 @@ class Artwork < ApplicationRecord
         through: :artwork_shares,
         source: :viewer
 
-    def self.artworks_for_user_id
-        user = User.find_by(id: :artist_id)
-        User.all.where("viewer = artist_id")
-        # user.shared_artworks
-        user = User.find(:artist_id)
-        artworks = user.artworks + user.shared_artworks
+     def self.artworks_for_user_id(artist_id)
+        Artwork.select(:title).left_outer_joins(:artwork_shares).where("artworks.artist_id = ? OR artwork_shares.viewer_id = ?", artist_id, artist_id).distinct
+    #     user = User.find_by(id: :artist_id)
+    #     User.all.where("viewer = artist_id")
+    #     # user.shared_artworks    
+    #     user = User.find(:artist_id)
+    #     artworks = user.artworks + user.shared_artworks
 
-        Artwork
-            .select(:shared_artworks)
-            .joins("artwork.id = artwork_shares.artwork_id")
-            .where()
+    #     Artwork
+    #         .select(:shared_artworks)
+    #         .joins("artwork.id = artwork_shares.artwork_id")
+    #         .where()
 
-    end
+     end
 end

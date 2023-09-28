@@ -2634,3 +2634,45 @@ LINE 1: SELECT "users".* FROM "users" WHERE (viewer = artist_id)
                                              ^:
   app/controllers/artworks_controller.rb:14:in `index'
 
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "omar"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "luke"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtwork Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "artworks" WHERE "artworks"."image_url" = $1 LIMIT $2[0m  [["image_url", "example14.com"], ["LIMIT", 1]]
+  [1m[36mArtwork Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "artworks" WHERE "artworks"."artist_id" = $1 AND "artworks"."title" = $2 LIMIT $3[0m  [["artist_id", 1], ["title", "Mona Lisa"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArtwork Create (4.3ms)[0m  [1m[32mINSERT INTO "artworks" ("title", "image_url", "artist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Mona Lisa"], ["image_url", "example14.com"], ["artist_id", 1], ["created_at", "2023-09-28 19:26:31.313820"], ["updated_at", "2023-09-28 19:26:31.313820"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtwork Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "artworks" WHERE "artworks"."image_url" = $1 LIMIT $2[0m  [["image_url", "example15.com"], ["LIMIT", 1]]
+  [1m[36mArtwork Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "artworks" WHERE "artworks"."artist_id" = $1 AND "artworks"."title" = $2 LIMIT $3[0m  [["artist_id", 2], ["title", "Starry Night"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtwork Create (0.3ms)[0m  [1m[32mINSERT INTO "artworks" ("title", "image_url", "artist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Starry Night"], ["image_url", "example15.com"], ["artist_id", 2], ["created_at", "2023-09-28 19:26:31.327633"], ["updated_at", "2023-09-28 19:26:31.327633"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtwork Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "artworks" WHERE "artworks"."image_url" = $1 LIMIT $2[0m  [["image_url", "example16.com"], ["LIMIT", 1]]
+  [1m[36mArtwork Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "artworks" WHERE "artworks"."artist_id" = $1 AND "artworks"."title" = $2 LIMIT $3[0m  [["artist_id", 3], ["title", "Bowl of Fruit"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArtwork Create (0.8ms)[0m  [1m[32mINSERT INTO "artworks" ("title", "image_url", "artist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Bowl of Fruit"], ["image_url", "example16.com"], ["artist_id", 3], ["created_at", "2023-09-28 19:26:31.334672"], ["updated_at", "2023-09-28 19:26:31.334672"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtwork Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "artworks" WHERE "artworks"."image_url" = $1 LIMIT $2[0m  [["image_url", "example17.com"], ["LIMIT", 1]]
+  [1m[36mArtwork Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "artworks" WHERE "artworks"."artist_id" = $1 AND "artworks"."title" = $2 LIMIT $3[0m  [["artist_id", 4], ["title", "Crayon Drawing"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mArtwork Create (0.3ms)[0m  [1m[32mINSERT INTO "artworks" ("title", "image_url", "artist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Crayon Drawing"], ["image_url", "example17.com"], ["artist_id", 4], ["created_at", "2023-09-28 19:26:31.342603"], ["updated_at", "2023-09-28 19:26:31.342603"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArtwork Load (3.0ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" SELECT artwork.* FROM artworks LEFT JOIN artwork_shares ON artwork_shares.artwork_id = artwork.id WHERE (artworks.artist_id = 2 OR artwork_shares.viewer_id = 2)[0m
+  [1m[36mArtwork Load (0.4ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" SELECT artwork.* FROM artworks LEFT JOIN artwork_shares ON artwork_shares.artwork_id = artwork.id WHERE (artworks.artist_id = 2 OR artwork_shares.viewer_id = 2) /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mArtwork Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "artworks" SELECT artwork.* FROM artworks LEFT JOIN artwork_shares ON artwork_shares.artwork_id = artwork.id WHERE (artworks.artist_id = 2 OR artwork_shares.viewer_id = 2)[0m
+  [1m[36mArtwork Load (0.7ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" SELECT artworks.* FROM artworks LEFT JOIN artwork_shares ON artwork_shares.artwork_id = artwork.id WHERE (artworks.artist_id = 2 OR artwork_shares.viewer_id = 2)[0m
+  [1m[36mArtwork Load (0.5ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" SELECT artworks.* FROM artworks LEFT JOIN artwork_shares ON artwork_shares.artwork_id = artwork.id WHERE (artworks.artist_id = 2 OR artwork_shares.viewer_id = 2) /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mArtwork Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "artworks" SELECT artworks.* FROM artworks LEFT JOIN artwork_shares ON artwork_shares.artwork_id = artwork.id WHERE (artworks.artist_id = 2 OR artwork_shares.viewer_id = 2)[0m
+  [1m[36mArtwork Count (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "artworks" LEFT JOIN artwork_shares ON artwork_shares.artwork_id = artwork.id WHERE (artworks.artist_id = 2 OR artwork_shares.viewer_id = 2)[0m
+  [1m[36mArtwork Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "artworks" LEFT JOIN artwork_shares ON artwork_shares.artwork_id = artwork.id WHERE (artworks.artist_id = 2 OR artwork_shares.viewer_id = 2)[0m
+  [1m[36mArtwork Load (2.2ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" LEFT OUTER JOIN "artwork_shares" ON "artwork_shares"."artwork_id" = "artworks"."id" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mArtwork Load (0.5ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" LEFT OUTER JOIN "artwork_shares" ON "artwork_shares"."artwork_id" = "artworks"."id" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mArtwork Load (2.4ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" LEFT OUTER JOIN "artwork_shares" ON "artwork_shares"."artwork_id" = "artworks"."id" WHERE (artworks.artist_id = 2 OR artwork_shares.viewer_id = 2)[0m

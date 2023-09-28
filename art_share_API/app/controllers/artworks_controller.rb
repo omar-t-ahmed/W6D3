@@ -1,19 +1,20 @@
 class ArtworksController < ApplicationController
     def index
-        if params.has_key?(:artist_id)
+        if Artwork.artworks_for_user_id(:artist_id)
             # index of nested resource
-            user = User.find(:artist_id)
-            artworks = user.artworks + user.shared_artworks
-            artworks = Artwork.where(artist_id: params[:artist_id])
+            artworks = Artwork.artworks_for_user_id(:artist_id)
+            # user = User.find(:artist_id)
+            # artworks = user.artworks + user.shared_artworks
+            # artworks = Artwork.where(artist_id: params[:artist_id])
         else
             # index of top-level resource
             artworks = Artwork.all
         end
 
-        shared = Artwork.artworks_for_user_id
+        # shared = Artwork.artworks_for_user_id
     
         # render json: artworks
-        render json: shared
+        render json: artworks.distinct
     end
 
     def create

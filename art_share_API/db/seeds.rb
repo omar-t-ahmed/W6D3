@@ -8,3 +8,7 @@
 
 User.create(name: 'omar')
 User.create(name: 'luke')
+Artwork.create(title: "Mona Lisa", image_url: "example14.com", artist_id: 1)
+Artwork.create(title: "Starry Night", image_url: "example15.com", artist_id: 2)
+Artwork.create(title: "Bowl of Fruit", image_url: "example16.com", artist_id: 3)
+Artwork.create(title: "Crayon Drawing", image_url: "example17.com", artist_id: 4)
